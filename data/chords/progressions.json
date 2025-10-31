@@ -1,0 +1,152 @@
+{
+  "progressions": {
+    "pop": [
+      {
+        "name": "I-V-vi-IV",
+        "degrees": ["I", "V", "vi", "IV"],
+        "description": "Most popular pop progression (C-G-Am-F)",
+        "examples": ["Let It Be - Beatles", "Don't Stop Believin' - Journey"],
+        "mood": "uplifting, anthemic"
+      },
+      {
+        "name": "vi-IV-I-V",
+        "degrees": ["vi", "IV", "I", "V"],
+        "description": "Emotional pop ballad progression",
+        "examples": ["Someone Like You - Adele"],
+        "mood": "melancholic, emotional"
+      },
+      {
+        "name": "I-IV-V",
+        "degrees": ["I", "IV", "V"],
+        "description": "Classic three-chord progression",
+        "examples": ["Twist and Shout - Beatles"],
+        "mood": "simple, energetic"
+      }
+    ],
+    "electronic": [
+      {
+        "name": "i-VI-III-VII",
+        "degrees": ["i", "VI", "III", "VII"],
+        "description": "Dark techno/trance progression (Am-F-C-G)",
+        "examples": ["Common in techno and trance"],
+        "mood": "dark, driving"
+      },
+      {
+        "name": "i-iv-VII-VI",
+        "degrees": ["i", "iv", "VII", "VI"],
+        "description": "Minor progression for deep house",
+        "examples": ["Many deep house tracks"],
+        "mood": "deep, hypnotic"
+      },
+      {
+        "name": "i-VII-VI-V",
+        "degrees": ["i", "VII", "VI", "V"],
+        "description": "Descending minor progression",
+        "examples": ["Common in progressive house"],
+        "mood": "epic, building"
+      }
+    ],
+    "jazz": [
+      {
+        "name": "ii-V-I",
+        "degrees": ["ii", "V", "I"],
+        "description": "Fundamental jazz progression",
+        "examples": ["Autumn Leaves", "All The Things You Are"],
+        "mood": "sophisticated, resolving"
+      },
+      {
+        "name": "I-vi-ii-V",
+        "degrees": ["I", "vi", "ii", "V"],
+        "description": "Rhythm changes, jazz standard",
+        "examples": ["I Got Rhythm - Gershwin"],
+        "mood": "swinging, upbeat"
+      },
+      {
+        "name": "iii-VI-ii-V",
+        "degrees": ["iii", "VI", "ii", "V"],
+        "description": "Circle of fifths progression",
+        "examples": ["Many bebop tunes"],
+        "mood": "complex, flowing"
+      }
+    ],
+    "rock": [
+      {
+        "name": "I-bVII-IV",
+        "degrees": ["I", "bVII", "IV"],
+        "description": "Mixolydian rock progression",
+        "examples": ["Sweet Child O' Mine - GNR"],
+        "mood": "powerful, driving"
+      },
+      {
+        "name": "i-bVI-bVII",
+        "degrees": ["i", "bVI", "bVII"],
+        "description": "Aeolian rock progression",
+        "examples": ["Stairway to Heaven - Led Zeppelin"],
+        "mood": "epic, anthemic"
+      }
+    ],
+    "ambient": [
+      {
+        "name": "I-iii-vi",
+        "degrees": ["I", "iii", "vi"],
+        "description": "Floating, ethereal progression",
+        "examples": ["Brian Eno ambient works"],
+        "mood": "calm, spacious"
+      },
+      {
+        "name": "I-II-IV",
+        "degrees": ["I", "II", "IV"],
+        "description": "Lydian ambient progression",
+        "examples": ["Common in ambient/drone"],
+        "mood": "dreamy, suspended"
+      }
+    ]
+  },
+  "chord_types": {
+    "major": {
+      "intervals": [0, 4, 7],
+      "symbol": "",
+      "quality": "consonant, happy"
+    },
+    "minor": {
+      "intervals": [0, 3, 7],
+      "symbol": "m",
+      "quality": "consonant, sad"
+    },
+    "dominant7": {
+      "intervals": [0, 4, 7, 10],
+      "symbol": "7",
+      "quality": "tension, wants to resolve"
+    },
+    "major7": {
+      "intervals": [0, 4, 7, 11],
+      "symbol": "maj7",
+      "quality": "dreamy, jazzy"
+    },
+    "minor7": {
+      "intervals": [0, 3, 7, 10],
+      "symbol": "m7",
+      "quality": "smooth, jazzy"
+    },
+    "sus2": {
+      "intervals": [0, 2, 7],
+      "symbol": "sus2",
+      "quality": "open, ambiguous"
+    },
+    "sus4": {
+      "intervals": [0, 5, 7],
+      "symbol": "sus4",
+      "quality": "suspended, tension"
+    },
+    "diminished": {
+      "intervals": [0, 3, 6],
+      "symbol": "dim",
+      "quality": "dissonant, unstable"
+    },
+    "augmented": {
+      "intervals": [0, 4, 8],
+      "symbol": "aug",
+      "quality": "tense, symmetrical"
+    }
+  }
+}

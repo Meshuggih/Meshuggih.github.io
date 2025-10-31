@@ -1,0 +1,169 @@
+{
+  "id": "synth_chord_generic",
+  "name": "Generic Chord Synth",
+  "manufacturer": "DawlessStudio",
+  "type": "synthesizer",
+  "category": "chords",
+  "year": 2025,
+  "polyphony": 6,
+  "oscillators": 2,
+  "filter_type": "lowpass_24db",
+  "description": "Generic polyphonic synthesizer for chord progressions and pads",
+  "parameters": [
+    {
+      "id": "osc1_waveform",
+      "name": "Oscillator 1 Waveform",
+      "type": "select",
+      "options": ["sine", "triangle", "sawtooth", "square"],
+      "default": "sawtooth",
+      "midi_cc": 70
+    },
+    {
+      "id": "osc2_waveform",
+      "name": "Oscillator 2 Waveform",
+      "type": "select",
+      "options": ["sine", "triangle", "sawtooth", "square"],
+      "default": "square",
+      "midi_cc": 71
+    },
+    {
+      "id": "osc_mix",
+      "name": "Oscillator Mix",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 64,
+      "description": "Balance between oscillator 1 (0) and oscillator 2 (127)",
+      "midi_cc": 72
+    },
+    {
+      "id": "filter_cutoff",
+      "name": "Filter Cutoff",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 100,
+      "description": "Lowpass filter cutoff frequency",
+      "midi_cc": 74
+    },
+    {
+      "id": "filter_resonance",
+      "name": "Filter Resonance",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 20,
+      "description": "Filter resonance/Q factor",
+      "midi_cc": 71
+    },
+    {
+      "id": "env_attack",
+      "name": "Envelope Attack",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 10,
+      "description": "Amplitude envelope attack time",
+      "midi_cc": 73
+    },
+    {
+      "id": "env_decay",
+      "name": "Envelope Decay",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 40,
+      "description": "Amplitude envelope decay time",
+      "midi_cc": 75
+    },
+    {
+      "id": "env_sustain",
+      "name": "Envelope Sustain",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 80,
+      "description": "Amplitude envelope sustain level",
+      "midi_cc": 79
+    },
+    {
+      "id": "env_release",
+      "name": "Envelope Release",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 50,
+      "description": "Amplitude envelope release time",
+      "midi_cc": 72
+    },
+    {
+      "id": "lfo_rate",
+      "name": "LFO Rate",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 30,
+      "description": "LFO speed",
+      "midi_cc": 76
+    },
+    {
+      "id": "lfo_depth",
+      "name": "LFO Depth",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 0,
+      "description": "LFO modulation intensity",
+      "midi_cc": 77
+    },
+    {
+      "id": "chorus_mix",
+      "name": "Chorus Mix",
+      "type": "knob",
+      "min": 0,
+      "max": 127,
+      "default": 30,
+      "description": "Chorus effect wet/dry mix",
+      "midi_cc": 93
+    }
+  ],
+  "ports": {
+    "midi_in": true,
+    "midi_out": false,
+    "midi_thru": true,
+    "audio_out_mono": false,
+    "audio_out_stereo": true,
+    "cv_gate": false
+  },
+  "ui_layout": {
+    "width": 800,
+    "height": 400,
+    "background_color": "#2a2a2a",
+    "sections": [
+      {
+        "name": "Oscillators",
+        "x": 50,
+        "y": 100,
+        "controls": ["osc1_waveform", "osc2_waveform", "osc_mix"]
+      },
+      {
+        "name": "Filter",
+        "x": 300,
+        "y": 100,
+        "controls": ["filter_cutoff", "filter_resonance"]
+      },
+      {
+        "name": "Envelope",
+        "x": 500,
+        "y": 100,
+        "controls": ["env_attack", "env_decay", "env_sustain", "env_release"]
+      },
+      {
+        "name": "Modulation",
+        "x": 50,
+        "y": 250,
+        "controls": ["lfo_rate", "lfo_depth", "chorus_mix"]
+      }
+    ]
+  }
+}
