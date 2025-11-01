@@ -1,6 +1,8 @@
 import OpenAI from 'openai';
 import { useConfigStore } from '@stores/configStore';
 import systemPromptTemplate from '@data/prompts/system_prompt.md?raw';
+import { RUNTIME } from '@/config/runtime';
+
 
 /**
  * GPT Action Interface - Structured commands that GPT can execute
@@ -227,7 +229,21 @@ export class GPTService {
       playback_position?: number;
       is_playing?: boolean;
     } = {}
-  ): Promise<GPTResponse> {
+  ): Promise<
+    if (RUNTIME.demoMode) {
+      // TODO [ ] Affiner les réponses simulées (modes Jam/Mix/Sound/Sensei)
+      // [X] Ne pas appeler d'API externe en mode Démo
+      return {
+        message: 'Mode Démo activé : aucune requête réseau. Voici une suggestion simulée.',
+        actions: [],
+        suggestions: [],
+        metadata: {
+          confidence: 0,
+          mode: 'jam_buddy',
+        },
+      } as GPTRResponse;
+    }
+> {
     if (!this.client) {
       throw new Error('GPT client not initialized. Please configure API key.');
     }
